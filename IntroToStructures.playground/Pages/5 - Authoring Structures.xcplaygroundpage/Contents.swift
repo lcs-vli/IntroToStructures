@@ -33,6 +33,44 @@ import Foundation
  */
 // Begin your work here...
 
+//===================================2D Parallelogram====================================
+struct Parallelogram {
+    
+    // MARK: Properties
+    var length: Double
+    var height: Double
+    
+    // Computed property to return the raw area
+    var area: Double {
+        return length * height
+    }
+    
+    var perimeter: Double{
+        return 2*(length + height)
+    }
+    
+    // Computed property to return a description of the area
+    var areaDescription: String {
+        return "The area of the parallelogram is " + String(format: "%.1f", area) + " square units."
+    }
+    
+    var perimeterDescription: String{
+        return "The perimeter of the parallelogram is " + String(format: "%.1f", perimeter) + " square units."
+    }
+    
+}
+
+// Create a rectangle instance
+var someParallelogram = Parallelogram(length: 10, height: 4)
+
+//describe the shape
+print("The shape is a parallelogram")
+
+// Report on the area?
+print(someParallelogram.areaDescription)
+
+//report on the perimeter
+print(someParallelogram.perimeterDescription)
 
 
 /*:
