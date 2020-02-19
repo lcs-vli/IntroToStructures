@@ -55,7 +55,7 @@ struct Parallelogram {
     }
     
     var perimeterDescription: String{
-        return "The perimeter of the parallelogram is " + String(format: "%.1f", perimeter) + " square units."
+        return "The perimeter of the parallelogram is " + String(format: "%.1f", perimeter) + " units."
     }
     
 }
@@ -71,6 +71,49 @@ print(someParallelogram.areaDescription)
 
 //report on the perimeter
 print(someParallelogram.perimeterDescription)
+
+
+//===================================2D Triangle====================================
+struct Triangle {
+    
+    // MARK: Properties
+    var side1: Double
+    var side2: Double
+    var side3: Double
+    var heightRelatedToSide1: Double
+    
+    // Computed property to return the raw area
+    var area: Double {
+        return side1 * heightRelatedToSide1 * 0.5
+    }
+    
+    var perimeter: Double{
+        return side1 + side2 + side3
+    }
+    
+    // Computed property to return a description of the area
+    var areaDescription: String {
+        return "The area of the triangle is " + String(format: "%.1f", area) + " square units."
+    }
+    
+    var perimeterDescription: String{
+        return "The perimeter of the triangle is " + String(format: "%.1f", perimeter) + " units."
+    }
+    
+}
+
+// Create a rectangle instance
+var someTriangle = Triangle(side1:3, side2: 4, side3:5, heightRelatedToSide1: 5)
+
+//describe the shape
+print("=======================================================")
+print("The shape is a triangle")
+
+// Report on the area?
+print(someTriangle.areaDescription)
+
+//report on the perimeter
+print(someTriangle.perimeterDescription)
 
 
 /*:
