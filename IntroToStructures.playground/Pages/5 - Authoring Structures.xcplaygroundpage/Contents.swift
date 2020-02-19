@@ -154,6 +154,47 @@ print(someCylinder.surfaceAreaDescription)
 
 //report on the perimeter
 print(someCylinder.volumeDescription)
+
+//===================================3D Cone====================================
+struct Cone {
+    
+    // MARK: Properties
+    var radius: Double
+    var height: Double
+    var side: Double
+    
+    // Computed property to return the raw area
+    var surfaceArea: Double {
+        return Double.pi * pow(radius, 2) + Double.pi * radius * side
+    }
+    
+    var volume: Double{
+        return (Double.pi * pow(radius, 2) * height)/(1/3)
+    }
+    
+    // Computed property to return a description of the area
+    var surfaceAreaDescription: String {
+        return "The surfaceArea of the cone is " + String(format: "%.1f", surfaceArea) + " square units."
+    }
+    
+    var volumeDescription: String{
+        return "The volume of the cone is " + String(format: "%.1f", volume) + " units cubed."
+    }
+    
+}
+
+// Create a rectangle instance
+var someCone = Cone(radius:5, height:10, side:20)
+
+//describe the shape
+print("=======================================================")
+print("The shape is a cone")
+
+// Report on the area?
+print(someCone.surfaceAreaDescription)
+
+//report on the perimeter
+print(someCone.volumeDescription)
 /*:
  [Previous: Area Example - Rectangle](@previous) | Page 4
  */
